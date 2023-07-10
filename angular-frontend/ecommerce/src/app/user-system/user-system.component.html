@@ -1,0 +1,22 @@
+<div class="container">
+   <img class="top-right-image" src="assets/VectorAlto.png">
+   <img class="bottom-left-image" src="assets/VectorBaixo.png"> 
+   
+    <div class="login-form">
+      <h2>Realizar Login</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="userInput" id="userInput" name="userInput" placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" [(ngModel)]="passwordInput" id="passwordInput" name="passwordInput" placeholder="Senha">
+        </div>
+        <div class="form-group">
+          <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+        </div>
+        <div class="separator"></div>
+        <button type="submit" (click)="realizarLogin()" class="btn btn-primary" >Login</button>
+        <div class="resultado-login" [ngClass]="{'show': exibirMensagemErro}">{{ loginMessage }} </div>
+      </form>
+    </div>
+  </div>

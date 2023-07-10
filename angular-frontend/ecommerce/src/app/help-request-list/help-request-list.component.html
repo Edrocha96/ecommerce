@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="/help-request-list">
+                    <img src="assets/home.png" alt="Ícone 1">
+                </a>
+            </li>
+            <li>
+                <a href="/help-request-list">
+                    <img src="assets/grid.png" alt="Ícone 2">
+                </a>
+            </li>
+            <li>
+                <a href="/help-request-list">
+                    <img src="assets/filter.png" alt="Ícone 3">
+                </a>
+            </li>
+            <li>
+                <a href="/help-request-list">
+                    <img src="assets/settings.png" alt="Ícone 4">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2 class="card-title">Chamados Pendentes</h2>
+        </div>
+        <div class="search-container-01">
+            <div class="search-container-02">
+                <input type="text" placeholder="Entre com o numero do chamado aqui - Ex: 3456" class="search-input">
+                <button class="search-button">Pesquisar</button>
+            </div>
+        </div>
+        <div class="card-list">
+            <div class="card-help-request" *ngFor="let helpRequest of helpRequests">
+                <div class="card-column">
+                    <div class="card-item">
+                      <span class="card-label">Número do Pedido:</span>
+                      <span class="card-value">{{ helpRequest.numberRequest }}</span>
+                    </div>
+                    <div class="card-item">
+                      <span class="card-label">Número do Documento:</span>
+                      <span class="card-value">{{ helpRequest.documentNumber }}</span>
+                    </div>
+                    <div class="card-item">
+                      <span class="card-label">Nome:</span>
+                      <span class="card-value">{{ helpRequest.name }}</span>
+                    </div>
+                </div>
+                <div class="card-column">
+                    <div class="card-item">
+                      <span class="card-label">Motivo de Contato:</span>
+                      <span class="card-value">{{ helpRequest.contactReason }}</span>
+                    </div>
+                    <div class="card-item">
+                      <span class="card-label">Descrição:</span>
+                      <span class="card-value">{{ helpRequest.description }}</span>
+                    </div>
+                    <div class="card-item">
+                        <span class="card-label">E-mail:</span>
+                        <span class="card-value">{{ helpRequest.email }}</span>
+                      </div>
+                </div>
+                <div class="card-column">
+                    <div class="card-item">
+                        <span class="card-label">Status:</span>
+                        <span class="card-value">{{ helpRequest.status }}</span>
+                      </div>
+                      <button class="details-button"  [disabled]="modalOpen" (click)="openModal(helpRequest)">Atuar</button>
+                </div>
+          </div>
+    </div>
+</div>

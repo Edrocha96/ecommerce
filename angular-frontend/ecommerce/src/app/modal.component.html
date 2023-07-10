@@ -1,0 +1,49 @@
+<div class="modal-container" #modalContainer>
+  <div class="modal-content">
+    <h2 class="modal-title">Detalhes chamado</h2>
+    <div class="modal-labels">
+      <div class="modal-label">
+        <span class="label-name">Número do Pedido: </span>
+        <span class="label-value">{{ helpRequest.numberRequest }}</span>
+      </div>
+      <div class="modal-label">
+        <span class="label-name">Número do Documento: </span>
+        <span class="label-value">{{ helpRequest.documentNumber }}</span>
+      </div>
+      <div class="modal-label">
+        <span class="label-name">Nome: </span>
+        <span class="label-value">{{ helpRequest.name }}</span>
+      </div>
+      <div class="modal-label">
+        <span class="label-name">Motivo de Contato: </span>
+        <span class="label-value">{{ helpRequest.contactReason }}</span>
+      </div>
+      <div class="modal-label">
+        <span class="label-name">Descrição: </span>
+        <span class="label-value">{{ helpRequest.description }}</span>
+      </div>
+      <div class="modal-label">
+        <span class="label-name">E-mail: </span>
+        <span class="label-value">{{ helpRequest.email }}</span>
+      </div>
+      <div class="modal-label">
+        <span class="label-name">Status: </span>
+        <span class="label-value">{{ helpRequest.status }}</span>
+      </div>
+      <hr class="separator" /> 
+      <h2 class="actions-title">Ações</h2> 
+      <input class="actions-input" placeholder="Descreva a resposta desse chamado ao usuário . . ." type="text" />
+      <div class="status-container"> 
+        <label class="status-label">Opções de Status:</label> 
+        <select class="status-select">
+          <option value="opcao1">Pendente</option> 
+          <option value="opcao2">Em Processo</option>
+          <option value="opcao3">Concluído</option>
+        </select>
+      </div>
+    <div class="modal-buttons">
+      <button class="back-button" (click)="onBackButtonClick()">Voltar</button>
+      <button class="save-button " (click)="onSaveButtonClick()">Salvar</button>
+    </div>
+  </div> 
+  </div>

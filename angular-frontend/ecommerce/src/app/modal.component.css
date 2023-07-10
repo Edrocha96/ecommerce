@@ -1,0 +1,119 @@
+.modal-label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modal-container {
+    width: 450px; /* Ajuste conforme a largura desejada */
+    height: 610px; /* Ajuste conforme a altura desejada */
+    background-color: #F2F5FA; /* Cor de fundo desejada */
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0; /* Define a opacidade inicial como 0 */
+    transition: opacity 0.3s ease-in-out; /* Adiciona uma transição suave */
+    border: 2px solid #0E4088;
+}
+
+.modal-container.visible {
+  opacity: 1; /* Altera a opacidade para 1 no momento correto */
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #0E4088;
+  margin-top: 5px
+}
+  
+.modal-title {
+  margin-top: 5;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0E4088; 
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modal-labels {
+  margin-top: 20px;
+  padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.modal-label {
+  margin-bottom: 10px;
+  align-items: center; /* Alinha verticalmente os elementos */
+}
+
+.label-name {
+  width: 150px;
+  font-weight: bold;
+}
+
+.label-value {
+  flex-grow: 1;
+}
+  
+  .modal-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 125px;
+  display: flex;
+}
+
+.back-button {
+  background-color: #0E4088;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 12px;
+  order: 1; 
+  color: #FFFF;
+}
+
+.save-button {
+  background-color: #0E4088;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 12px;
+  order: 2; 
+  color: #FFFF;
+}
+
+  .actions-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0E4088; 
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .actions-input {
+    width: 300px;
+    height: 75px; 
+    margin-left: 55px;
+  }
+
+ 
+.status-container {
+  display: flex; 
+  align-items: center; 
+  margin-top: 10px; 
+  margin-left: 55px;
+}
+
+.status-label {
+  margin-right: 10px; 
+  font-weight: bold;
+  color: #0E4088; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.status-select {
+  width: 160px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input[type="text"]::placeholder {
+  text-align: center; /* Centraliza o texto */
+  vertical-align: top; /* Alinha verticalmente no topo */
+}

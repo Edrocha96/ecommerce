@@ -1,0 +1,83 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #235ca8;
+  }
+  
+  .top-right-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 0; 
+  }
+  
+  .bottom-left-image {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0; 
+  }
+  
+  .login-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1; 
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .forgot-password {
+    padding: 10px;
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    padding: 10px;
+    width: 250px;
+    background-color: #0E4088;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .separator {
+    margin: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .resultado-login {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .resultado-login.show {
+    opacity: 1;
+    visibility: visible;
+  }
