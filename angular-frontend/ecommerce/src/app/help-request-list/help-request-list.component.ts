@@ -13,7 +13,7 @@ import { ModalComponent } from '../modal.component';
 })
 export class HelpRequestListComponent implements OnInit {
 
-  helpRequests ?: HelpRequest[];
+   helpRequests ?: HelpRequest[]; 
   modalOpen: boolean = false;
 
   constructor(private router: Router,
@@ -24,17 +24,21 @@ export class HelpRequestListComponent implements OnInit {
   
   ngOnInit(): void {
     this.getHelperRequests();
+    /* this.getHelperRequestsMock();  */
   }
 
   getHelperRequests() {
-   /*  this.helpRequestServiceService.getTasksList().subscribe(data => {
-      this.helpRequest = data;
-      console.log("helpRequest: ",this.helpRequest)
-    }); */
-
-    this.helpRequests = this.helpRequestServiceService.getTasksListMock(); 
-    console.log("helpRequest: ",this.helpRequests)
+     this.helpRequestServiceService.getTasksList().subscribe(data => {
+      this.helpRequests = data;
+      console.log("helpRequest: ",this.helpRequests)
+    }); 
   }
+
+  getHelperRequestsMock() {
+   this.helpRequests = this.helpRequestServiceService.getTasksListMock();  
+   console.log("helpRequest: ",this.helpRequests)
+ }
+
 
   openModal(card: any) {
     this.modalOpen = true;

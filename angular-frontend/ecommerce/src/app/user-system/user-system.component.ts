@@ -15,7 +15,7 @@ export class UserSystemComponent implements OnInit {
   constructor(private router: Router) {}
 
   users: any[] = [
-    { usuario: 'ed', senha: '123456' },
+    { usuario: 'edgar', senha: '123456' },
     { usuario: 'francisco', senha: '123456' },
     { usuario: 'diego', senha: '123456' },
     { usuario: 'gustavo', senha: '123456' }
